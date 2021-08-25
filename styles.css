@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+html {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: lightgray;
+}
+
+body, html, ul, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-button {
+    padding: .5em;
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.nav-buttons {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-left: auto;
+    font-size: 1.25em;
+    text-shadow: .5px .5px #707070;
+}
+
+.nav-menu-button-container {
+    align-self: center;
+    cursor: pointer;
+}
+
+.nav-menu-button {
+    width: 25px;
+    height: 4px;
+    background-color: #82e7c2;
+    border: 1px solid #707070;
+    margin: 3px .75em;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+#nav-menu-button-1, #nav-menu-button-2, #nav-menu-button-3 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-bar-name {
+    display: flex;
+    align-self: center;
+    column-gap: .4em;
+    font-size: 1.5em;
+    margin-right: auto;
+    margin-left: .5em;
+    text-shadow: 1.5px 1.5px #707070;
+    cursor: pointer;
+}
+
+#nav-sandbox {
+    color: #82e7c2;
+    font-weight: 700;
+}
+
+/*ANIMATIONS*/
+
+.nav-button:hover{
+    font-weight: 600;
+}
+
+.nav-menu-button-container:hover .nav-menu-button{
+    border: 1px groove black;
+    box-shadow: .5px .5px #707070;
+}
+
+.change #nav-menu-button-2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
