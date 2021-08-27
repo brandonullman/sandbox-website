@@ -12,11 +12,25 @@ body, html, ul, h1 {
     padding: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+}
+
 nav {
     display: flex;
+    height: 46px;
     width: 100%;
     background-color: white;
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.2);
+    transition: height .5s ease-in-out;
 }
 
 footer {
@@ -24,23 +38,45 @@ footer {
     justify-content: center;
 }
 
+.button {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    background-color: #82e7c2;
+    border-style: groove;
+}
+
+.button:hover {
+    color: white;
+    border-color: white;
+}
+
+.button:active {
+    box-shadow: inset 0px 0px 50px -25px #000000;
+}
+
 .nav-button {
-    padding: .5em;
-    padding-right: 0;
+    padding: .5em .25em;
     cursor: pointer;
 }
 
 .nav-buttons {
     display: flex;
+    flex: 1;
+    justify-content: flex-end;
     list-style-type: none;
-    align-items: center;
-    margin-left: auto;
     font-size: 1.25em;
     text-shadow: .5px .5px #707070;
 }
 
 .nav-menu-button-container {
-    align-self: center;
+    padding-top: .5em;
+    margin-left: .50em;
+    margin-right: .75em;
     cursor: pointer;
 }
 
@@ -49,9 +85,29 @@ footer {
     height: 4px;
     background-color: #82e7c2;
     border: 1px solid #707070;
-    margin: 3px .75em;
+    margin-top: 3px;
     border-radius: 2px;
-    transition: .5s;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px 15px;
+}
+
+.widget-container h3 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+nav:hover .nav-menu-button {
+    transition: .5s ease-in-out;
 }
 
 #nav-menu-button-1, #nav-menu-button-2, #nav-menu-button-3 {
@@ -61,10 +117,9 @@ footer {
 
 .nav-bar-name {
     display: flex;
-    align-self: center;
+    width: auto;
     column-gap: .4em;
     font-size: 1.5em;
-    margin-right: auto;
     margin-left: .5em;
     text-shadow: 1.5px 1.5px #707070;
     cursor: pointer;
@@ -73,6 +128,13 @@ footer {
 #nav-sandbox {
     color: #82e7c2;
     font-weight: 700;
+}
+
+#value {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
 }
 
 /*ANIMATIONS*/
@@ -86,8 +148,17 @@ footer {
     box-shadow: .5px .5px #707070;
 }
 
+.change .nav-buttons {
+    flex: 1;
+    justify-content: space-evenly;
+}
+
 .change #nav-menu-button-2 {
     margin-top: 8px;
     margin-bottom: 8px;
+    transition: .5s ease-in-out;
 }
 
+nav.change{
+    height: 25em;
+}
